@@ -1,10 +1,4 @@
-import os
-import requests
-from dotenv import load_dotenv
-from langgraph.prebuilt import create_react_agent
-from langchain_openai import ChatOpenAI
 from langchain_core.tools import tool
+from langchain.tools import ToolRuntime     #to save context and use it in the tools
 
-load_dotenv('keys.env', override=True)
-
-print("KEY:", os.environ.get("OPENAI_API_KEY")) 
+print(hasattr(langchain.tools, "ToolRuntime"))
